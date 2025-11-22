@@ -2,14 +2,42 @@
 
 :root {
   --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+  --primary-green: #1f4a32;
+  --secondary-green: #2d5a3d;
+  --light-green: #f0f7f2;
+  --gold-accent: #d4af37;
+  --cream: #fef8f1;
 }
 
 @theme inline {
   --font-sans: var(--font-inter);
+  
+  /* Custom green color palette */
+  --color-primary: #1f4a32;
+  --color-emerald-900: #1f4a32;
+  --color-emerald-800: #2d5a3d;
+  --color-emerald-700: #3f6b4f;
+  --color-emerald-600: #4f7c5f;
+  --color-emerald-500: #5f8d6f;
+  --color-emerald-400: #7ba087;
+  --color-emerald-300: #97b39f;
+  --color-emerald-200: #b3c6b7;
+  --color-emerald-100: #d9e7db;
+  --color-emerald-50: #f0f7f2;
+  
+  /* Gold accent colors */
+  --color-gold-600: #d4af37;
+  --color-gold-500: #dab84a;
+  --color-gold-400: #e0c15d;
+  --color-gold-300: #e6ca70;
+  --color-gold-200: #ecd383;
+  --color-gold-100: #f2dc96;
+  --color-gold-50: #f8e5a9;
 }
 
 body {
   font-family: var(--font-inter);
+  color: #1f4a32;
 }
 
 /* Custom scrollbar */
@@ -54,9 +82,62 @@ body {
   animation: spin 1s linear infinite;
 }
 
-/* Hero gradient background */
+/* Hero gradient background - Green theme */
 .hero-gradient {
-  background: linear-gradient(135deg, #fef7f0 0%, #fdf2f8 50%, #f9fafb 100%);
+  background: linear-gradient(135deg, #f0f7f2 0%, #e8f4ea 50%, #f0f7f2 100%);
+}
+
+/* Green theme utilities */
+.bg-primary-green {
+  background-color: #1f4a32;
+}
+
+.bg-secondary-green {
+  background-color: #2d5a3d;
+}
+
+.bg-light-green {
+  background-color: #f0f7f2;
+}
+
+.text-primary-green {
+  color: #1f4a32;
+}
+
+.text-secondary-green {
+  color: #2d5a3d;
+}
+
+.border-green {
+  border-color: #97b39f;
+}
+
+.btn-primary-green {
+  background-color: #1f4a32;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-green:hover {
+  background-color: #2d5a3d;
+  transform: translateY(-1px);
+}
+
+.btn-secondary-green {
+  background-color: #f0f7f2;
+  color: #1f4a32;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: 1px solid #97b39f;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary-green:hover {
+  background-color: #d9e7db;
 }
 
 /* Card hover effects */

@@ -2,14 +2,13 @@
   "name": "handicrafts-ecommerce",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://YOUR-USERNAME.github.io/handicrafts-ecommerce",
+  "homepage": "https://WorkProfile-web.github.io/handicrafts-ecommerce",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next build && next export",
     "start": "next start",
     "lint": "eslint",
-    "predeploy": "npm run export",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d out"
   },
   "dependencies": {

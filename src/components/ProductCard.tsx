@@ -25,7 +25,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     : 0;
 
   return (
-    <div className="group bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100">
+    <div className="group bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-emerald-100">
       {/* Image Container */}
       <div className="relative aspect-square overflow-hidden">
         <Link href={`/products/${product.id}`}>
@@ -43,7 +43,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         
         {/* Discount Badge */}
         {discountPercentage > 0 && (
-          <div className="absolute top-3 left-3 bg-rose-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+          <div className="absolute top-3 left-3 bg-primary-green text-white text-xs font-bold px-2 py-1 rounded-full">
             -{discountPercentage}%
           </div>
         )}
@@ -64,13 +64,13 @@ export default function ProductCard({ product }: ProductCardProps) {
       {/* Content */}
       <div className="p-4">
         {/* Category */}
-        <p className="text-xs font-medium text-rose-500 uppercase tracking-wide mb-2">
+        <p className="text-xs font-medium text-primary-green uppercase tracking-wide mb-2">
           {product.category}
         </p>
 
         {/* Title */}
         <Link href={`/products/${product.id}`}>
-          <h3 className="font-semibold text-gray-800 mb-2 hover:text-rose-500 transition-colors line-clamp-2">
+          <h3 className="font-semibold text-primary-green mb-2 hover:text-emerald-600 transition-colors line-clamp-2">
             {product.title}
           </h3>
         </Link>
@@ -94,7 +94,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         {/* Price */}
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center space-x-2">
-            <span className="text-lg font-bold text-gray-800">
+            <span className="text-lg font-bold text-primary-green">
               ${product.price.toFixed(2)}
             </span>
             {product.originalPrice && (
@@ -112,16 +112,16 @@ export default function ProductCard({ product }: ProductCardProps) {
             disabled={!product.inStock}
             className={`flex-1 py-2 px-4 rounded-lg font-medium transition-all duration-200 ${
               product.inStock
-                ? 'bg-rose-500 hover:bg-rose-600 text-white hover:shadow-md'
+                ? 'bg-primary-green hover:bg-secondary-green text-white hover:shadow-md'
                 : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-            } ${showSuccess ? 'bg-green-500 hover:bg-green-500' : ''}`}
+            } ${showSuccess ? 'bg-emerald-600 hover:bg-emerald-600' : ''}`}
           >
             {showSuccess ? 'Added!' : isInCart(product.id) ? 'Add More' : 'Add to Cart'}
           </button>
           
           <Link 
             href={`/products/${product.id}`}
-            className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:border-rose-300 hover:text-rose-500 transition-colors font-medium"
+            className="px-4 py-2 border border-emerald-300 text-secondary-green rounded-lg hover:border-primary-green hover:text-primary-green transition-colors font-medium"
           >
             View
           </Link>
